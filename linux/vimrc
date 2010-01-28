@@ -1,3 +1,10 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" @file     .vimrc
+" @brief    This file contains configurations of vim 
+" @author   Dohyun Yun ( dualistmage@gmail.com )
+" @date     2010.01.28
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " backspace options
 set backspace=indent,eol,start
 

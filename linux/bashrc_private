@@ -1,3 +1,10 @@
+#####################################################################
+# @file     .bashrc_private
+# @brief    This file contains configurations of bashrc
+# @author   Dohyun Yun ( dualistmage@gmail.com )
+# @date     2010.01.28
+#####################################################################
+
 # ------ [ grep color option ]
 export GREP_OPTION='--color=auto'
 export GREP_COLOR='7;33'

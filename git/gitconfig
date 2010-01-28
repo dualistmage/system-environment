@@ -1,3 +1,10 @@
+#####################################################################
+# @file     .gitconfig
+# @brief    This file contains configurations of color and alias.
+# @author   Dohyun Yun ( dualistmage@gmail.com )
+# @date     2010.01.28
+#####################################################################
+
 [user]
 	name = dualistmage
 	email = dualistmage@nate.com
