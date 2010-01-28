@@ -1,0 +1,6 @@
+############################################
+#     Rename follwing list before using    #
+############################################
+
+    1. "bashrc_private" -> ".bashrc_private"
+    2. "vimrc"          -> ".vimrc" 

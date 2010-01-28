@@ -1,0 +1,113 @@
+" backspace options
+set backspace=indent,eol,start
+
+" basic options
+set showmatch
+set ruler
+"set number
+set sta
+set wildmenu
+set term=ansi
+set scrolloff=3
+set nu
+"set visualbell
+
+" indent options
+set autoindent
+set smartindent
+set cindent
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+" search method
+set hlsearch
+set incsearch
+
+" title bar
+set title
+set titlestring=%{hostname()}:\ %f
+set titlelen=60
+
+" status bar
+set laststatus=2
+set statusline=[%02n]%*\ %f%*\ %(\ (%M%R%H)%)\%=ASCII=%b\ HEX=%B\ Pos=<%v,%l>\ %P
+
+" shell
+let &shell='/bin/bash -f'
+map <C-Z> :shell<CR>
+
+
+" for Ruby
+set nocompatible      " We're running Vim, not Vi!
+filetype on           " Enable filetype detection
+filetype indent on    " Enable filetype-specific indenting
+filetype plugin on    " Enable filetype-specific plugins
+"compiler ruby         " Enable compiler support for ruby
+
+
+
+" syntax
+"syntax on
+"set t_Co=8
+"set t_AB=[%?%p1%{8}%<%t%p1%{40}%+%e%p1%{92}%+%;%dm
+"set t_AF=[%?%p1%{8}%<%t%p1%{30}%+%e%p1%{82}%+%;%dm
+"set t_so=[1;32;45m
+"set t_us=[1;32m
+colorscheme elflord
+hi StatusLine cterm=bold,reverse ctermbg=Yellow ctermfg=Red
+hi StatusLineNC cterm=bold,reverse
+
+" save last localtion for WIN32 platform
+autocmd BufReadPost *
+	\ if line("'\"") > 0 && line("'\"") <= line("$") |
+	\   exe "normal g`\"" |
+	\ endif
+au BufNewFile,BufRead *.c,*.cc,*.cpp,*.inl,*.h set ft=cpp cindent autoindent expandtab
+
+"Dualistmage macro"
+map <C-G> I//<Esc><Esc>jI<Esc>
+map ,. :vsp ~/git/sf1-revolution/source/<CR><C-W>50<
+map ,/ <C-W>c
+map ,1 :b!1<CR>
+map ,2 :b!2<CR>
+map ,3 :b!3<CR>
+map ,4 :b!4<CR>
+map ,5 :b!5<CR>
+map ,6 :b!6<CR>
+map ,7 :b!7<CR>
+map ,8 :b!8<CR>
+map ,9 :b!9<CR>
+map ,0 :b!0<CR>
+map ,w :bw<CR>
+map ,# :b!#<CR>
+
+" Rename.vim  -  Rename a buffer within Vim and on the disk
+"
+" Copyright June 2007 by Christian J. Robinson <infynity@onewest.net>
+"
+" Distributed under the terms of the Vim license.  See ":help license".
+"
+" Usage:
+"
+" :Rename[!] {newname}
+
+command! -nargs=* -complete=file -bang Rename :call Rename("<args>", " "<bang>")
+
+function! Rename(name, bang)
+	let l:curfile = expand("%:p")
+	let v:errmsg = ""
+	silent! exe "saveas" . a:bang . " " . a:name
+	if v:errmsg =~# '^$\|^E329'
+	if expand("%:p") !=# l:curfile && filewritable(expand("%:p"))
+	silent exe "bwipe! " . l:curfile
+if delete(l:curfile)
+	echoerr "Could not delete " . l:curfile
+	endif
+	endif
+	else
+	echoerr v:errmsg
+	endif
+	endfunction
+
