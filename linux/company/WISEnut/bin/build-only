@@ -1,0 +1,32 @@
+build-ilib
+if [ $? -ne 0 ]; then
+    exit $?
+fi
+build-wlib
+if [ $? -ne 0 ]; then
+    exit $?
+fi
+build-icma
+if [ $? -ne 0 ]; then
+    exit $?
+fi
+build-imllib
+if [ $? -ne 0 ]; then
+    exit $?
+fi
+build-ilplib
+if [ $? -ne 0 ]; then
+    exit $?
+fi
+build-la
+if [ $? -ne 0 ]; then
+    exit $?
+fi
+build-idmlib
+if [ $? -ne 0 ]; then
+    exit $?
+fi
+build-sf1
+if [ $? -ne 0 ]; then
+    exit $?
+fi

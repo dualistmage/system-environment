@@ -1,0 +1,4 @@
+cd $SF1V5_ROOT; git fetch;
+cd $WISELIB;    git fetch;
+cd $IZENELIB;   git fetch;
+cd $LA_PATH;    git fetch;

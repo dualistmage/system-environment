@@ -1,0 +1,4 @@
+cd $SF1V5_ROOT; git log -n1| grep commit | sed 's/commit/SF1-R      :/g'
+cd $WISELIB;    git log -n1| grep commit | sed 's/commit/WISELIB    :/g'
+cd $IZENELIB;   git log -n1| grep commit | sed 's/commit/IZENELIB   :/g'
+cd $LA_PATH;    git log -n1| grep commit | sed 's/commit/LA-MANAGER :/g'

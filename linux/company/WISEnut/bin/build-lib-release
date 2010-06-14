@@ -1,0 +1,23 @@
+cd $HOME/git/cmake
+git pull
+
+cd $HOME/git/izenelib/build
+git pull
+make clean
+rm -rf $HOME/git/izenelib/build/*
+cmake ../ -DCMAKE_SYSTEM_PREFIX_PATH=~/library -DEXTRA_CMAKE_MODULES_DIRS=~/git/cmake -DCMAKE_BUILD_TYPE=RELEASE
+make
+
+cd $HOME/git/wiselib/build
+git pull
+make clean
+rm -rf $HOME/git/wiselib/build/*
+cmake ../ -DCMAKE_SYSTEM_PREFIX_PATH=~/library -DEXTRA_CMAKE_MODULES_DIRS=~/git/cmake -DCMAKE_BUILD_TYPE=RELEASE
+make
+
+cd $HOME/git/la-manager/build
+git pull
+make clean
+rm -rf $HOME/git/la-manager/build/*
+cmake ../ -DCMAKE_SYSTEM_PREFIX_PATH=~/library -DEXTRA_CMAKE_MODULES_DIRS=~/git/cmake -DCMAKE_BUILD_TYPE=RELEASE
+make

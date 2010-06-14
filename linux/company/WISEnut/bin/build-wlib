@@ -1,0 +1,10 @@
+echo "-------------- [ wiselib build"
+cd $HOME/git/wiselib/build
+make clean
+rm -rf $HOME/git/wiselib/build/*
+xcmake ../
+if [ $? -ne 0 ]; then
+    exit $?
+fi
+make
+exit $?

@@ -1,0 +1,19 @@
+echo "-------------- [ KMA 64 build"
+
+KMA_ORANGE_PATH=$HOME/cvs/kmalib/wisekma-orange
+KMA_TARGET_PATH=$HOME/cvs/kma64
+
+$HOME/cvs/checkout.sh
+source $KMA_ORANGE_PATH/.bashrc_kmaOrange64
+cd $KMA_ORANGE_PATH
+make test
+./klgmake ./dic/ ./knowledge/
+
+rm -rf $KMA_TARGET_PATH
+mkdir -p $KMA_TARGET_PATH/interface
+cp $KMA_ORANGE_PATH/src/interface/*.h $KMA_TARGET_PATH/interface
+mkdir $KMA_TARGET_PATH/knowledge
+cp $KMA_ORANGE_PATH/knowledge/*.txt $KMA_ORANGE_PATH/knowledge/wko.klg $KMA_TARGET_PATH/knowledge
+cp $KMA_ORANGE_PATH/libwko.a $KMA_TARGET_PATH
+make clean sl -C $KMA_ORANGE_PATH
+cp $KMA_ORANGE_PATH/libwko.so $KMA_TARGET_PATH

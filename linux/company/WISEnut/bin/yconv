@@ -1,0 +1,16 @@
+#/bin/sh
+if [ $# -eq 3 ]
+then
+	find . -name "$3" -type f | while read file
+	do
+		echo "Excute : iconv -f $1 -t $2 < $file > $file.tmpiconv --verbose";
+		iconv -f $1 -t $2 < $file > $file.tmpiconv --verbose;
+		mv $file.tmpiconv $file;
+	done
+	exit
+else
+	echo "Thans for using Yun's iconv"
+	echo "----------------------------------------------------------------------"
+	echo "[Usage] yconv <Input Encoding> <Output Encoding> <File name or regexp>"
+	exit
+fi

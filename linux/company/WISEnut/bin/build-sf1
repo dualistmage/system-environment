@@ -1,0 +1,10 @@
+echo "-------------- [ sf1 build"
+cd $HOME/git/sf1-revolution/build
+make clean
+rm -rf $HOME/git/sf1-revolution/build/*
+xcmake ../source
+if [ $? -ne 0 ]; then
+    exit $?
+fi
+make
+exit $?

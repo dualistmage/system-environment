@@ -1,0 +1,10 @@
+echo "-------------- [ imllib build"
+cd $HOME/git/imllib/build
+make clean
+rm -rf $HOME/git/imllib/build/*
+xcmake ../
+if [ $? -ne 0 ]; then
+    exit $?
+fi
+make
+exit $?

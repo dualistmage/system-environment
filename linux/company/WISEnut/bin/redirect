@@ -1,0 +1,3 @@
+git remote rename origin korean
+git remote rename shanghai origin
+find ./.git -type f -name config -exec sed -i 's/remote = korean/remote = origin/g' {} \;

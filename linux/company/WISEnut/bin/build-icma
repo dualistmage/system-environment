@@ -1,0 +1,4 @@
+echo "-------------- [ icma build"
+$HOME/git/icma/build/build.sh clean
+$HOME/git/icma/build/build.sh
+exit $?

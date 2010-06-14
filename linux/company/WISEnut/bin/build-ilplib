@@ -1,0 +1,3 @@
+echo "-------------- [ ilplib build"
+$HOME/git/ilplib/build/build_langid.sh
+exit $?

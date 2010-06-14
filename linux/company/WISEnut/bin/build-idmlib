@@ -1,0 +1,10 @@
+echo "-------------- [ idmlib build"
+cd $HOME/git/idmlib/build
+make clean
+rm -rf $HOME/git/idmlib/build/*
+xcmake ../
+if [ $? -ne 0 ]; then
+    exit $?
+fi
+make
+exit $?

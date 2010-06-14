@@ -1,0 +1,3 @@
+echo "-------------- [ KMA build"
+build-kma64
+build-kma32

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for dir in /home/dualistmage/git/*; do
+    echo
+    echo
+    echo "--------------------[" ${dir/\/home\/dualistmage\/git\//}
+    cd $dir
+    git pull
+done

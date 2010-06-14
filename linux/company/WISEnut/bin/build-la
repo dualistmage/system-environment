@@ -1,0 +1,10 @@
+echo "-------------- [ la-manager build"
+cd $HOME/git/la-manager/build
+make clean
+rm -rf $HOME/git/la-manager/build/*
+xcmake ../
+if [ $? -ne 0 ]; then
+    exit $?
+fi
+make
+exit $?

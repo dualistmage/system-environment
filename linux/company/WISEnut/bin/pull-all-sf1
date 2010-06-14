@@ -1,0 +1,13 @@
+cd /home/wisenut/dualistmage/git/izenelib
+echo "--------------------[ izenelib"
+git pull
+cd /home/wisenut/dualistmage/git/wiselib
+echo "--------------------[ wiselib"
+git pull
+cd /home/wisenut/dualistmage/git/la-manager
+echo "--------------------[ la-manager"
+git pull
+cd /home/wisenut/dualistmage/git/sf1-revolution/build
+echo "--------------------[ sf1-revolution"
+git pull
+

@@ -1,0 +1,11 @@
+echo "-------------- [ izenelib build"
+cd $HOME/git/izenelib/build
+make clean
+rm -rf $HOME/git/izenelib/build/*
+xcmake ../
+if [ $? -ne 0 ]; then
+    exit $?
+fi
+make
+exit $?
+

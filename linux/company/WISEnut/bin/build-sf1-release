@@ -1,0 +1,9 @@
+cd $HOME/git/sf1-revolution/build
+make clean
+rm -rf $HOME/git/sf1-revolution/build/*
+cmake ../source -DCMAKE_SYSTEM_PREFIX_PATH=~/library -DEXTRA_CMAKE_MODULES_DIRS=~/git/cmake -DCMAKE_BUILD_TYPE=RELEASE
+if [ $? -ne 0 ]; then
+    exit $?
+fi
+make
+exit $?

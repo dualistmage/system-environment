@@ -1,0 +1,59 @@
+# bash-sf1
+
+export LANG="ko_KR.utf8"
+
+export WISELIB=$HOME/git/wiselib
+
+export SF1V5_ROOT=$HOME/git/sf1-revolution
+
+export SF1V5_BUILD="ia32-glibc27-gcc41"
+
+export IZENELIB=$HOME/git/izenelib
+
+export LOCAL_LIB=$HOME/library
+
+export BOOST_ROOT=$LOCAL_LIB/boost-1_39
+
+# For KMA CVS
+export CVSROOT=:pserver:sf1package@211.39.140.226:/cvsroot/wisekma
+
+# For GLog
+export GLOG_PATH=$LOCAL_LIB
+
+# For orange
+export LA_PATH=$HOME/git/la-manager
+export WISEKMA=$LOCAL_LIB/kma
+
+
+# For java
+export JAVA_HOME=$LOCAL_LIB/jdk1.6.0_20
+export CLASSPATH=.:$JAVA_HOME/lib
+# export TOMCAT_HOME=$HOME/public_html
+
+# For ICMA
+export IZENECMA=$HOME/git/icma
+
+#For XXXLIB
+export ILPLIB=$HOME/git/ilplib
+export IDMLIB=$HOME/git/idmlib
+export IMLLIB=$HOME/git/imllib
+
+# glog
+export GLOG_logtostderr=0
+#export GLOG_stderrthreshold=0
+export GLOG_log_dir=$HOME/glog_data/
+
+#For local-git-server
+export SRV_111=211.39.140.111:$HOME/git-bare
+
+# LIBXML2
+export LIBXML2=$HOME/library/libxml2
+
+# PROTOCOL BUF
+export PROTOBUF=$HOME/library/protobuf
+
+# For dinamic Library - should be positioned last
+export PATH=$LOCAL_LIB/bin:$JAVA_HOME/bin:$HOME/system/bin:$PATH
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib:$WISELIB/lib:$IZENELIB/lib:$BOOST_ROOT/lib:$LOCAL_LIB/lib:$LA_PATH/lib:$WISEKMA:$LIBXML2/lib:$PROTOBUF/lib:
+
